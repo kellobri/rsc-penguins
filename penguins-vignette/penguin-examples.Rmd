@@ -1,5 +1,8 @@
 ---
 title: "Example graphs using the penguins data"
+output:
+  html_document:
+    code_folding: hide
 ---
 
 ```{r, include = FALSE}
@@ -11,6 +14,11 @@ knitr::opts_chunk$set(
 )
 ```
 
+## About the data 
+
+Data were collected and made available by Dr. Kristen Gorman and the Palmer Station, Antarctica LTER, a member of the Long Term Ecological Research Network.
+
+The [palmerpenguins](https://allisonhorst.github.io/palmerpenguins/) package contains two datasets: `penguins` and `penguins_raw`.
 
 ```{r setup, warning=FALSE, message=FALSE}
 library(palmerpenguins)
@@ -19,7 +27,7 @@ library(ggplot2)
 
 ## Penguin mass vs. flipper length
 
-```{r mass-flipper}
+```{r mass-flipper, warning=FALSE}
 mass_flipper <- ggplot(data = penguins, 
                        aes(x = flipper_length_mm,
                            y = body_mass_g)) +
@@ -45,7 +53,7 @@ mass_flipper
 
 ## Flipper length vs. bill length
 
-```{r}
+```{r warning=FALSE}
 flipper_bill <- ggplot(data = penguins,
                          aes(x = flipper_length_mm,
                              y = bill_length_mm)) +
@@ -183,3 +191,4 @@ ggplot(penguins, aes(x = flipper_length_mm,
         plot.caption.position = "plot") +
   facet_wrap(~species)
 ```
+
