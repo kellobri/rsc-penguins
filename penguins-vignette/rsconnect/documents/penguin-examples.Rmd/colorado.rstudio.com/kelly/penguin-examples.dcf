@@ -1,0 +1,12 @@
+name: penguin-examples
+title: penguin-examples
+username: kelly
+account: kelly
+server: colorado.rstudio.com
+hostUrl: https://colorado.rstudio.com/rsc/__api__
+appId: 8434
+bundleId: 43018
+url: https://colorado.rstudio.com/rsc/content/8434/
+when: 1610643040.95875
+asMultiple: FALSE
+asStatic: FALSE
